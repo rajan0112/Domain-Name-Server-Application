@@ -4,11 +4,13 @@ import socket
 import requests
 import json
 
-app = Flask(__name__)
-@app.route('/fibonacci', methods = ['GET'])
 
 ok_stat= status.HTTP_200_OK
 fail_stat= 'bad format', status.HTTP_400_BAD_REQUEST
+
+app = Flask(__name__)
+@app.route('/fibonacci', methods = ['GET'])
+
 
 def US():
     host = request.args.get('hostname')
